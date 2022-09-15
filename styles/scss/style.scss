@@ -1,0 +1,196 @@
+@import './reset.scss';
+@import './blocks';
+
+body {
+	font-family: 'Montserat', sans-serif;
+}
+
+.main {
+	background-color: #000000;
+}
+
+.container {
+	max-width: 1230px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.about {
+	&__container {
+		margin-top: 20px;
+	}
+}
+
+.project-modal {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba($color: #000000, $alpha: 0.8);
+
+	&__content {
+		max-width: 400px;
+		height: 300px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+
+		padding: 10px;
+		border-radius: 10px;
+
+		background-color: #f3f3f3;
+		position: relative;
+
+		z-index: 2;
+	}
+
+	&__close {
+		position: absolute;
+		top: 0;
+		right: 10px;
+
+		font-size: 40px;
+
+		color: #aaa;
+
+		transition: color 0.3s;
+
+		&:hover {
+			color: #326cf9;
+		}
+	}
+	&__text {
+		text-align: center;
+		font-size: 24px;
+	}
+
+	&__link {
+		font-size: 60px;
+
+		color: #000000;
+
+		transition: color 0.3s;
+
+		&:hover {
+			color: #326cf9;
+		}
+	}
+}
+
+.footer {
+	font-size: 48px;
+}
+
+@media screen and (max-width: 978px) {
+	.nav {
+		&__link {
+			li {
+				font-size: 17px;
+			}
+		}
+	}
+	.hero {
+		&__container {
+			grid-row-gap: 20px;
+		}
+
+		&__title {
+			font-size: 28px;
+			margin-bottom: 10px;
+		}
+
+		&__subtitle {
+			font-size: 22px;
+			font-weight: 400;
+		}
+
+		&__description {
+			font-size: 14px;
+		}
+
+		&__about {
+			text-align: center;
+		}
+
+		&__links {
+			justify-content: center;
+		}
+
+		&__box {
+			max-width: 350px;
+		}
+	}
+
+	.slider {
+		max-width: 80%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.about {
+		&__container {
+			grid-template-columns: 1fr 1fr;
+
+			grid-gap: 20px;
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.header {
+		.nav {
+			&__link {
+				a {
+					font-size: 14px;
+
+					padding: 5px 7px;
+				}
+			}
+		}
+	}
+	.slider {
+		max-width: 90%;
+
+		&__title {
+			font-size: 36px;
+		}
+
+		.btn-prev {
+			top: 80px;
+			transform: translateY(-11px);
+		}
+
+		.btn-next {
+			top: 80px;
+			transform: translateY(-11px);
+		}
+	}
+	.about {
+		&__container {
+			grid-template-columns: 1fr;
+		}
+
+		&__title {
+			color: #ffffff;
+			font-size: 36px;
+
+			text-align: center;
+		}
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.hero {
+		padding-top: 44px;
+	}
+}
