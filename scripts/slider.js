@@ -1,7 +1,9 @@
 const sliderItem = document.querySelectorAll('.slider-item') // получаем все html-элементы с классом .slider-item
 const sliderLine = document.querySelector('.slider-line') // получаем html-элемент с классом .slider-line
 let count = 0 // считает на каком слайде сейчас находится слайдер
-let width
+let width = undefined
+const nextButton = document.querySelector('.btn-next')
+const prevButton = document.querySelector('.btn-prev')
 
 // функция init выполняется при загрузки страницы и рассчитывает ширину рабочей области слайдера и изменить его
 function init() {
@@ -27,7 +29,7 @@ init()
 window.addEventListener('resize', init)
 
 // при нажатии на кнопку вызывается анонимная функция, которая
-document.querySelector('.btn-next').addEventListener('click', function () {
+nextButton.addEventListener('click', function () {
 	count++
 
 	// проверяет, если count больше или равно длинны масива sliderItem, то сбрасывает count в 0, что соответсвует первому слайду, это нужно для того, чтобы перемещаться к первому слайду, когда слайдер находится на последнем слайде и была нажата кнопка next
@@ -37,7 +39,7 @@ document.querySelector('.btn-next').addEventListener('click', function () {
 	rollSlider()
 })
 
-document.querySelector('.btn-prev').addEventListener('click', function () {
+prevButton.addEventListener('click', function () {
 	count--
 
 	// проверяет, если count меньше 0, то присваивает count значение, которое равно последнему элементу массива sliderItem, это нужно для того, чтобы перемещатся к последнему слайду, когда слайдер находится на первом слайде и была нажата кнопка prev

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,12 +10,13 @@
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
+		<link rel="icon" href="public/favicon.ico" type="image/x-icon" />
 		<link
 			href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="./styles/css/style.css" />
-		<title>О себе</title>
+		<title>Савенков Владислав</title>
 	</head>
 	<body>
 		<main class="main">
@@ -31,8 +32,8 @@
 						<li class="nav__link">
 							<a href="#about">Обо мне</a>
 						</li>
-						<li class="nav__link">
-							<a data-modal-link="projectsModal">Проекты</a>
+						<li class="nav__link" id="projectsModalButton">
+							<a>Проекты</a>
 						</li>
 					</ul>
 				</nav>
@@ -44,22 +45,34 @@
 						<h1 class="hero__name">Савенков Владислав</h1>
 						<h2 class="hero__title">Веб-разработчик</h2>
 						<p class="hero__description">
-							Привет! Меня зовут Влад. Работаю веб-разработчиком.
+							Привет! Меня зовут Влад. Я младший веб-разработчик.
 						</p>
 						<div class="hero__links">
-							<a class="hero__link" href="https://github.com/SavenkovVladislav">
+							<a
+								class="hero__link"
+								href="https://github.com/SavenkovVladislav"
+								target="_blank"
+							>
 								<i class="bx bxl-github"></i>
 							</a>
-							<a class="hero__link" href="https://t.me/vladiksupermario">
+							<a
+								class="hero__link"
+								href="https://t.me/vladiksupermario"
+								target="_blank"
+							>
 								<i class="bx bxl-telegram"></i>
 							</a>
-							<a class="hero__link" href="https://vk.com/v.savenkov97">
+							<a
+								class="hero__link"
+								href="https://vk.com/v.savenkov97"
+								target="_blank"
+							>
 								<i class="bx bxl-vk"></i>
 							</a>
 						</div>
 					</div>
 					<div class="hero__box">
-						<img class="hero__box-img" src="me1.png" alt="man" />
+						<img class="hero__box-img" src="public/hero.png" alt="photo" />
 					</div>
 				</div>
 			</section>
@@ -70,28 +83,30 @@
 					<div class="slider-item">
 						<p class="slider-item__title">Верстка</p>
 						<p class="slider-item__text">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-							reiciendis sit est, architecto ad quasi accusantium totam omnis
-							odio veniam quibusdam unde natus veritatis dolores rem excepturi,
-							libero sequi voluptatem.
+							Хорошо владею HTML5 и CSS3. Использую БЭМ-методологию для
+							именования классов. Владею препроцессором SASS/SCSS.
 						</p>
 					</div>
 					<div class="slider-item">
 						<p class="slider-item__title">JavaScript</p>
 						<p class="slider-item__text">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-							reiciendis sit est, architecto ad quasi accusantium totam omnis
-							odio veniam quibusdam unde natus veritatis dolores rem excepturi,
-							libero sequi voluptatem.
+							Имею базовые навыки написания JavaScript.
 						</p>
 					</div>
 					<div class="slider-item">
 						<p class="slider-item__title">React</p>
 						<p class="slider-item__text">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-							reiciendis sit est, architecto ad quasi accusantium totam omnis
-							odio veniam quibusdam unde natus veritatis dolores rem excepturi,
-							libero sequi voluptatem.
+							Имею базовые навыки написания проектов с использованием библиотеки
+							React. Имел опыт использования классовых и функицональных
+							компонентов, жизненного цикла компонента.
+						</p>
+					</div>
+					<div class="slider-item">
+						<p class="slider-item__title">Остальное</p>
+						<p class="slider-item__text">
+							Система контроля версий Git и GitHub/GitLab. Инструменты для
+							управления проектами Jira и YouTrack. Графический онлайн-редактор
+							Figma. Базовые представления о Agile.
 						</p>
 					</div>
 				</div>
@@ -100,7 +115,7 @@
 					<button class="btn-next"></button>
 				</div>
 			</section>
-			<sectoin class="about" id="about">
+			<section class="about" id="about">
 				<h2 class="about__title">Обо мне</h2>
 				<div class="about__container container">
 					<div class="about-item">
@@ -112,52 +127,74 @@
 						</p>
 					</div>
 					<div class="about-item">
-						<p class="about-item__title">Опыт</p>
-						<p class="about-item__text">
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio
-							similique molestias sequi qui error. Error molestias, dolores
-							aliquam soluta obcaecati a? Dolorum hic quae omnis laboriosam
-							voluptatem animi commodi. Dolorem.
-						</p>
+						<p class="about-item__title">Опыт работы</p>
+						<div class="about-item__text">
+							<p>
+								Два года работал на должности техник-программист в компаниях
+								специализирующихся на автоматизации технических процессов. На
+								данный момент работаю в компании
+								<span
+									><a href="https://decentury.io/" target="_blank"
+										>DECENTURY</a
+									></span
+								>
+								на должности младшего веб-разработчика с 14 февраля 2022г.
+							</p>
+						</div>
 					</div>
 					<div class="about-item">
-						<p class="about-item__title">Образование</p>
-						<p class="about-item__text">
-							Закончил НГТУ, факультет мехатроники и автоматизации по
-							специальности Автоматизация технических процессов и производств в
-							2019 году.
-						</p>
+						<p class="about-item__title">Мотивация</p>
+						<div class="about-item__text">
+							<p>
+								Я очень люблю то чувство, когда ко мне приходит прозрение по
+								решению задачи. Я могу оторваться от личных дел, в любое время
+								суток и пойти к компьютерю, чтобы попробовать и если это
+								получится, то я расплваюсь в улыбке, если нет, то начнется
+								увлекательный мыслительный процесс.
+							</p>
+						</div>
 					</div>
 					<div class="about-item">
-						<p class="about-item__title">Образование</p>
-						<p class="about-item__text">
-							Закончил НГТУ, факультет мехатроники и автоматизации по
-							специальности Автоматизация технических процессов и производств в
-							2019 году.
-						</p>
+						<p class="about-item__title">Хобби</p>
+						<div class="about-item__text">
+							<p>
+								Программирование является не только моей работой, но и моим
+								любимым хобби.
+							</p>
+						</div>
 					</div>
 					<div class="about-item">
-						<p class="about-item__title">Образование</p>
-						<p class="about-item__text">
-							Закончил НГТУ, факультет мехатроники и автоматизации по
-							специальности Автоматизация технических процессов и производств в
-							2019 году.
-						</p>
+						<p class="about-item__title">Жизненные ценности</p>
+						<div class="about-item__text">
+							<ul>
+								<li>
+									Не бояться казаться глупыи и задавать вопросы, если
+									не получилось самому найти ответ
+								</li>
+								<li>Держать свое слово</li>
+								<li>Развиваться как в hard так и в soft-скиллах</li>
+								<li>Получать удовольствие от своей жизни</li>
+							</ul>
+						</div>
 					</div>
 					<div class="about-item">
-						<p class="about-item__title">Образование</p>
-						<p class="about-item__text">
-							Закончил НГТУ, факультет мехатроники и автоматизации по
-							специальности Автоматизация технических процессов и производств в
-							2019 году.
-						</p>
+						<p class="about-item__title">Смешной анекдот</p>
+						<div class="about-item__text">
+							<p>
+								Если бы программисты были врачами, им бы говорили «У меня болит
+								нога», а они отвечали «Ну не знаю, у меня такая же нога, а
+								ничего не болит».
+							</p>
+						</div>
 					</div>
 				</div>
-			</sectoin>
+			</section>
 
-			<div class="project-modal" data-modal-window="projectsModal">
+			<div class="project-modal" id="projectsModalWindow">
 				<div class="project-modal__content">
-					<button class="project-modal__close">&times;</button>
+					<button class="project-modal__close" id="projectsModalClose">
+						&times;
+					</button>
 					<p class="project-modal__text">
 						Если вы хотите посмотреть на мои скромные проекты, то добро
 						пожаловать в мой аккаунт GitHub! Я всегда рад обратной связи.
@@ -172,43 +209,11 @@
 			</div>
 
 			<footer class="footer">
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt rem
-				voluptatem illum officiis atque ut laboriosam provident, corrupti
-				placeat omnis, tempore ratione ipsa eum, quibusdam dolorum cum mollitia
-				nisi ab nostrum at dolor? Placeat incidunt, doloremque sunt ratione
-				nulla vel tenetur culpa sit repellendus, cum aperiam nemo cupiditate aut
-				aliquid delectus laborum libero a? Velit cum consequuntur, dolores amet
-				aliquam nihil, officia aut ab, fuga sed pariatur quisquam dolorum
-				eveniet dolorem sunt consectetur beatae ducimus libero excepturi unde et
-				totam quaerat ad! Voluptatem, consectetur? Amet quas beatae, magnam
-				blanditiis eius dolore architecto obcaecati? Iure rem saepe doloribus
-				similique, velit eveniet explicabo nostrum minima perferendis
-				exercitationem accusantium, recusandae nam earum cumque nisi assumenda
-				voluptatem ipsum deleniti commodi? Ullam exercitationem placeat sit
-				dolorem neque quasi, odio dolore earum vero voluptates cum inventore
-				cupiditate? Quidem iure culpa, earum fuga magnam quo iusto suscipit
-				cumque ipsa similique harum voluptas cum aperiam voluptatibus.
-				Consequuntur dolor aliquid ipsa dolore porro reprehenderit odit culpa,
-				necessitatibus facilis nesciunt exercitationem beatae tempore. Labore
-				debitis suscipit rem corporis quasi repudiandae amet quisquam minus. Ad
-				molestias corrupti doloremque praesentium rem dolorum, in et quo dicta
-				vitae reiciendis aliquid, assumenda hic excepturi adipisci temporibus
-				ducimus nesciunt laboriosam? Porro officiis adipisci facilis, fuga rerum
-				velit nihil tempore dolorem in ducimus iure, delectus ipsa asperiores
-				quos. Dolor illo impedit nemo quos voluptate cupiditate ipsam natus
-				rerum consequatur obcaecati debitis ea magnam animi exercitationem
-				facilis reprehenderit dignissimos maiores molestiae atque consectetur
-				vitae eaque, iste aspernatur sunt! Qui quasi quos dignissimos repellat
-				repudiandae, corporis, sunt vero libero ad maiores inventore!
-				Consequatur, expedita id dolorem odio minus ea delectus maxime mollitia
-				corporis aut harum laudantium tempore non optio. Quasi maxime eius eaque
-				accusantium nulla culpa maiores. Consectetur, excepturi minus veritatis,
-				rem, laudantium blanditiis repellendus rerum ut doloremque ullam
-				nesciunt tenetur aut. Facilis dolore numquam tempore maxime quasi.
+				<p class="footer__text">&#169 Савенков Владислав 2022г.</p>
 			</footer>
 		</main>
-		<script src="/scripts/scroll.js"></script>
-		<script src="/scripts/slider.js"></script>
-		<script src="/scripts/modal.js"></script>
+		<script src="scripts/scroll.js"></script>
+		<script src="scripts/slider.js"></script>
+		<script src="scripts/modal.js"></script>
 	</body>
 </html>

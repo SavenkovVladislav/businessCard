@@ -70,6 +70,7 @@
 
 		&-img {
 			animation: ava-bg 10s infinite alternate;
+			pointer-events: none;
 		}
 	}
 }
